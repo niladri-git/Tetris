@@ -1,0 +1,80 @@
+While creating jar the location of manifest file is very imp.
+
+$ pwd
+/c/Workspaces/Git/Java/Tetris-Game
+
+$ javac -sourcepath src/main/java -d build/classes src/main/java/com/tetris/Tetris.java
+
+$ cd build/classes/
+
+$ ls
+Tetris.jar  com  manifest.txt
+
+$ cat manifest.txt
+Main-Class: com.tetris.Tetris
+/* Newline mandatory at EOF */
+
+$ jar cvfm Tetris.jar manifest.txt com/tetris/*.class
+added manifest
+adding: com/tetris/Board$TAdapter.class(in = 1519) (out= 786)(deflated 48%)
+adding: com/tetris/Board.class(in = 5881) (out= 3069)(deflated 47%)
+adding: com/tetris/Shape$Tetrominoes.class(in = 1280) (out= 653)(deflated 48%)
+adding: com/tetris/Shape.class(in = 2463) (out= 1142)(deflated 53%)
+adding: com/tetris/Tetris$1.class(in = 448) (out= 316)(deflated 29%)
+adding: com/tetris/Tetris.class(in = 1172) (out= 695)(deflated 40%)
+
+$ java -jar Tetris.jar
+
+$ find . -type f
+./.git/COMMIT_EDITMSG
+./.git/config
+./.git/description
+./.git/HEAD
+./.git/hooks/applypatch-msg.sample
+./.git/hooks/commit-msg.sample
+./.git/hooks/post-update.sample
+./.git/hooks/pre-applypatch.sample
+./.git/hooks/pre-commit.sample
+./.git/hooks/pre-push.sample
+./.git/hooks/pre-rebase.sample
+./.git/hooks/prepare-commit-msg.sample
+./.git/hooks/update.sample
+./.git/index
+./.git/info/exclude
+./.git/logs/HEAD
+./.git/logs/refs/heads/master
+./.git/logs/refs/remotes/origin/master
+./.git/objects/12/f467c57dea296fd01e423d233b7b32bdd88bb8
+./.git/objects/27/8c0e95c41bc20e03c0c9fc9986524e07ab8b7b
+./.git/objects/2c/1553c319e4ea98b060084ed465855ef519b8ac
+./.git/objects/55/76efb18dd290e8b66661d5a4272781b792a66f
+./.git/objects/6b/468b62a9884e67ca19b673f8e14e1931d65036
+./.git/objects/6c/d258aa0a316663295c902f4644f43d78b26662
+./.git/objects/6e/5fdd46cfb4d95d65ba685f5d96a1ef1ff629c1
+./.git/objects/7a/a9d97de4ee2efc5fb86a0e70aa4a843c7fb48d
+./.git/objects/91/f594bb0386b7c140d48dcafcd19ee56c2f911e
+./.git/objects/96/4d9f02863ac2dad8e8bd38fcf36dd2f05cc870
+./.git/objects/97/13f7749c76ee7369d4439ac7ed441d72ddc8af
+./.git/objects/9b/458aa65445181cf1fb67b9cf064c5ee63864f2
+./.git/objects/a3/bc2138f574c8031fd39a8f2dc3d92b4dc45f5b
+./.git/objects/a3/c02f84dbf5b1847dd25bee0d1a972b53cf08b8
+./.git/objects/a6/49a9c5a02a5ea5880b8de1b44240a61afd043a
+./.git/objects/a6/871831a2336938bec7ae5471f7ad516a021e8e
+./.git/objects/e6/e7359643d81279ad10449634440b7a59c1c0ab
+./.git/objects/fd/1d8b14dad91331152372f8fca80d575ea1748e
+./.git/refs/heads/master
+./.git/refs/remotes/origin/master
+./.gitignore
+./build/classes/com/tetris/Board$TAdapter.class
+./build/classes/com/tetris/Board.class
+./build/classes/com/tetris/Shape$Tetrominoes.class
+./build/classes/com/tetris/Shape.class
+./build/classes/com/tetris/Tetris$1.class
+./build/classes/com/tetris/Tetris.class
+./build/classes/manifest.txt
+./build/classes/Tetris.jar
+./src/main/java/com/tetris/Board.java
+./src/main/java/com/tetris/notes.txt
+./src/main/java/com/tetris/Shape.java
+./src/main/java/com/tetris/Tetris.java
+./src/main/java/manifest.txt
